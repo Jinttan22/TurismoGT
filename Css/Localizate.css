@@ -1,0 +1,315 @@
+/* Code CSS */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f4f4f4;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 40px;
+  border-bottom: 1px solid #eee;
+  position: relative;
+}
+
+.logo img {
+  width: 200px;
+  height: auto;
+}
+
+nav {
+  margin-left: auto;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+  padding: 0;
+  margin: 0;
+}
+
+nav ul:hover {
+  transform: scale(1.05);
+}
+
+nav a {
+  text-decoration: none;
+  color: #333;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.2s;
+  font-size: 14px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+nav a:hover {
+  border-color: #333;
+}
+
+.puntos-interes {
+  padding: 2em;
+  display: flex;
+  background: #f7f7f7;
+}
+
+.puntos-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2em;
+  align-items: center;
+  justify-content: center;
+}
+
+.puntos-texto {
+  flex: 1;
+  min-width: 300px;
+}
+
+.puntos-texto h2 {
+  font-size: 2.5em;
+  line-height: 1.2;
+}
+
+.puntos-texto .verde {
+  color: #00713d;
+}
+
+.puntos-texto p {
+  margin: 0.8em 0;
+  font-size: 1.1em;
+}
+
+.btn-rojo {
+  display: inline-block;
+  background: #d32f2f;
+  color: white;
+  padding: 0.8em 1.5em;
+  border-radius: 0.5em;
+  text-transform: uppercase;
+  text-decoration: none;
+  margin-top: 1em;
+  transition: background 0.3s;
+}
+
+.btn-rojo:hover {
+  background: #d32f2f;
+}
+
+.puntos-mapa {
+  flex: 1;
+  min-width: 350px;
+  height: 400px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+  border-radius: 1em;
+  overflow: hidden;
+}
+
+
+h1 {
+  text-align: center;
+  font-size: 2.5em;
+  margin-top: 40px;
+  color: #d32f2f;
+}
+
+.verde {
+  color: #00713d;
+}
+
+main {
+  padding: 2em;
+}
+
+h1, h2 {
+  font-size: 2em;
+  margin-bottom: 0.1em;
+}
+
+.verde {
+  color: green;
+}
+
+#map, #waze-map iframe {
+  width: 300%;
+  height: 600px;
+  margin: 1em 0;
+}
+
+.btn {
+  background: #d32f2f;
+  color: white;
+  padding: 0.5em 1em;
+  text-decoration: none;
+  display: inline-block;
+  margin: 1em 0;
+}
+
+.comentarios-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+  margin: 2em 0;
+}
+
+.comentario {
+  background: #d32f2f;
+  color: white;
+  border-radius: 1em;
+  padding: 1em;
+  width: 300px;
+}
+
+.comentario img {
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+}
+
+.admin-form {
+  max-width: 400px; /* igual al formulario de comentarios */
+  margin-top: 20px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  background-color: white;
+  border-radius: 20px;
+}
+
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  max-width: 400px;
+}
+
+form input, form textarea {
+  padding: 0.5em;
+  border: 1px solid #ccc;
+  border-radius: 0.5em;
+}
+
+form button {
+  background: green;
+  color: white;
+  padding: 0.7em;
+  border: none;
+  border-radius: 0.5em;
+}
+/* Sección general */
+.comentarios-admin-wrapper {
+  display: flex;
+  gap: 3em;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  margin-top: 2em;
+}
+
+/* Tarjetas con estilo */
+.card {
+  background: #fff;
+  border-radius: 2em;
+  padding: 2em;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: fadeInUp 0.6s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* Comentarios */
+.comentarios {
+  flex: 2;
+  min-width: 350px;
+}
+
+.comentario {
+  background: #d32f2f;
+  color: white;
+  border-radius: 1em;
+  padding: 1em;
+  width: 65%;
+  animation: fadeInUp 0.5s ease;
+}
+
+.comentarios-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  margin-bottom: 2em;
+}
+
+/* Formularios */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  font-size: 1rem;
+}
+
+form input,
+form textarea,
+form select {
+  padding: 0.8em 1em;
+  border: 1px solid #ccc;
+  border-radius: 0.8em;
+  font-size: 1rem;
+  transition: border-color 0.3s;
+}
+
+form input:focus,
+form textarea:focus,
+form select:focus {
+  border-color: #00713d;
+  outline: none;
+}
+
+form button {
+  background: #00713d;
+  color: white;
+  padding: 0.8em;
+  font-size: 1rem;
+  border: none;
+  border-radius: 0.8em;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+form button:hover {
+  background: #005c2f;
+}
+
+/* Estrellas */
+.estrellas {
+  display: flex;
+  flex-direction: column;
+}
+
+.estrellas label {
+  margin-bottom: 0.3em;
+  font-weight: bold;
+}
+
+/* Admin */
+.admin-form {
+  flex: 1;
+  min-width: 280px;
+}
+
+/* Animaciones */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

@@ -1,0 +1,85 @@
+.footer {
+  position: relative;
+  background: linear-gradient(
+      rgba(0, 0, 0, 0.6),
+      rgba(0, 0, 0, 0.6)
+    ),
+    url('https://upload.wikimedia.org/wikipedia/commons/0/00/Rio_Magdalena%2C_Girardot_Colombia._-_panoramio.jpg') no-repeat center center / cover;
+  color: #fff;
+  padding: 40px 20px 10px;
+  margin-top: 50px;
+  font-size: 0.95rem;
+  z-index: 1;
+}
+
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 30px;
+  max-width: 900px;
+  margin: auto;
+  text-align: left;
+}
+
+.footer-logo img {
+  max-width: 280px;
+  margin-bottom: 20px;
+}
+
+.footer-column h3 {
+  color: #00713d;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-column ul li {
+  margin-bottom: 18px;
+  color: #f0f0f0;
+}
+
+.footer-column .icon {
+  color: #c40000;
+  margin-right: 20px;
+}
+
+.social-icons a {
+  font-size: 1.6rem;
+  margin-right: 15px;
+  color: #c40000;
+  transition: transform 0.3s, color 0.3s;
+  text-decoration: none;
+}
+
+.social-icons a:hover {
+  transform: scale(1.2);
+  color: #ffffff;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding: 10px 0;
+  font-size: 0.85rem;
+  color: #ffa600;
+  border-top: 1px solid #ffffff;
+  margin-top: -30px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .footer-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-column {
+    width: 100%;
+    max-width: 300px;
+  }
+}

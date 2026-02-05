@@ -1,0 +1,152 @@
+/* SECCIÓN: VISITA GIRARDOT */
+.visit-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 100px; /* Reducir el espacio entre elementos */
+  padding: 30px 15px; /* Reducir el espaciado interno */
+  background: #fff;
+  align-items: center;
+  justify-content: center;
+  max-width: 1500px; /* Reducir el ancho máximo del contenedor */
+  margin: 0 auto; /* Centrar la sección */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); 
+  border-radius: 12px; 
+  position: relative; /* Para posicionar el contenedor de fondo */
+  z-index: 1; /* Asegurar que esté por encima del fondo */
+}
+
+/* Contenedor de fondo para profundidad */
+.visit-section::before {
+  content: '';
+  position: absolute;
+  top: -5px; /* Ajustar para que sobresalga */
+  left: -5px;
+  right: -5px;
+  bottom: -5px;
+  background: #f9f9f9; 
+  border-radius: 10px; 
+  z-index: -1; /* Colocar detrás de la sección */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); 
+}
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  max-width: 500px;
+  flex: 1 1 300px;
+}
+
+.gallery img {
+  width: 100%;
+  border-radius: 4px;
+  object-fit: cover;
+}
+
+.gallery .big {
+  grid-row: span 2;
+}
+
+.visit-text {
+  flex: 1 1 300px;
+  max-width: 500px;
+}
+
+.visit-text h2 {
+  color: #00713d;
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.visit-text p {
+  font-size: 16px;
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+.btn-rojo {
+  display: inline-block;
+  background: #b60000;
+  color: white;
+  padding: 20px 30px; 
+  text-decoration: none;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-radius: 4px; 
+  transition: background 0.3s, transform 0.2s; 
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); 
+}
+
+.btn-rojo:hover {
+  background: #910000;
+  transform: translateY(-2px); 
+}
+
+/* SECCIÓN: TE OFRECEMOS */
+.ofrecemos {
+  padding: 60px 20px;
+  background: #fafafa;
+  text-align: center;
+}
+
+.ofrecemos h2 {
+  font-size: 32px;
+  color: #00713d;
+  margin-bottom: 40px;
+}
+
+.ofrecemos-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: center;
+}
+
+.item {
+  flex: 1 1 300px;
+  max-width: 400px;
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.item h3 {
+  font-size: 100px;
+  color: #b60000;
+  font-weight: bold;
+}
+
+.item p {
+  font-size: 16px;
+  text-align: left;
+  line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+  .gallery {
+    grid-template-columns: 1fr;
+  }
+
+  .gallery .big {
+    grid-row: auto;
+  }
+
+  .visit-section {
+    flex-direction: column;
+  }
+
+  .ofrecemos-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .item {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .item h3 {
+    font-size: 48px;
+  }
+}

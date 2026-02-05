@@ -1,0 +1,87 @@
+<!-- Code HTML -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Turismo en Girardot</title>
+  <link rel="stylesheet" href="../Css/Localizate.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+          <img src="../Imagenes/Logo.png" alt="Logo Turismo Girardot" />
+        </div>
+        <nav>
+          <ul>
+            <li><a href="../index.html">Inicio</a></li>
+            <li><a href="../Paginas/HistoriaGirardot.html">Historia</a></li>
+            <li><a href="../Paginas/VisitaGirardot.html">Turismo</a></li>
+            <li><a href="../Paginas/Localizate.html">Comenta</a></li>
+            <li><a href="../Paginas/Localizate.html">Localizate</a></li>
+          </ul>
+        </nav>
+      </header>
+  <h1><span class="verde">Visita</span> Girardot</h1>
+
+<section class="puntos-interes">
+  <div class="puntos-container">
+    <!-- Texto -->
+    <div class="puntos-texto">
+      <h2><span class="verde">Visita</span><br>Puntos de Interés</h2>
+      <p>En el mapa, podrás ver los puntos de interés en Girardot</p>
+      <p><strong>Agradecemos cualquier comentario</strong></p>
+      <p>contacto@email.com</p>
+      <a href="#comentarios-y-admin" class="btn-rojo">Escríbenos</a>
+      <!-- Comentarios y Admin ahora dentro del texto -->
+<div class="comentarios">
+  <h2><span class="verde">Comentarios</span> de nuestros usuarios</h2>
+
+  <form id="comentario-form" class="card">
+    <h3>Deja tu comentario</h3>
+    <input type="text" id="nombre" placeholder="Tu nombre" required>
+    <textarea id="comentario" placeholder="Escribe tu comentario" required></textarea>
+    <div class="estrellas">
+      <label for="estrellas">Calificación:</label>
+      <select id="estrellas" required>
+        <option value="">Selecciona</option>
+        <option value="1">★ 1</option>
+        <option value="2">★ 2</option>
+        <option value="3">★ 3</option>
+        <option value="4">★ 4</option>
+        <option value="5">★ 5</option>
+      </select>
+    </div>
+    <button type="submit">Enviar</button>
+    <p id="mensaje-error" class="error"></p>
+  </form>
+
+  <div class="comentarios-container" id="comentarios-container">
+    <!-- Comentarios se mostrarán aquí -->
+  </div>
+
+  <div class="admin-form card">
+    <h3>Acceso administrador</h3>
+    <form id="admin-login-form">
+      <input type="password" id="clave-admin" placeholder="Clave de administrador" required />
+      <button type="submit">Ingresar</button>
+      <p id="admin-bienvenida" style="display:none; color: green; margin-top: 10px;">
+  Has iniciado sesión como <strong>administrador</strong>. Puedes eliminar comentarios.
+</p>
+    </form>
+  </div>
+</div>
+</div>
+
+    <!-- Mapa -->
+  <main>
+    <section id="mapa">
+      <div id="map"></div>
+      <div id="waze-map">
+        <iframe src="https://embed.waze.com/iframe?zoom=14&lat=4.3047&lon=-74.8039" width="100%" height="100"></iframe>
+      </div>
+    </section>
+  <script src="/Script/Localizate.js"></script>
+  <script async defer src="https://maps.googleapis.com/maps/api/js?AIzaSyDX28tHW6nhcB6tXba7xRP41kAFQC67r-o&callback=initMap"></script>
+</body>
+</html>
